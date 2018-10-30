@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        let numero;
+        const NORMAL = 1, NASA = 2, STUDENT = 3, SESAME = 4, POSTMAN = 5, EXIT = 6;
+        do {
+            numero = parseInt(prompt("Pulsa 1 para contar normalmente.\nPulsa 2 para contar como un ingeniero de la NASA.\nPulsa 3 para contar como un estudiante universitario.\nPulsa 4 para contar como en barrio sesamo.\nPulsa 5 para contar como un cartero.\nPulsa 6 para salir"));
+            switch (numero) {
+                case NORMAL:
+
+                    normal();
+                    break;
+
+                case NASA:
+                    nasa();
+                    break;
+
+                case STUDENT:
+                    student();
+                    break;
+
+                case SESAME:
+                    sesame();
+                    break;
+
+                case POSTMAN:
+                    postman();
+                    break;
+
+                case EXIT:
+                    break;
+
+            }
+
+        } while (numero !== EXIT)
+
+        function normal() {
+
+            let countLimit;
+            do {
+                countLimit = parseInt(prompt("¿Hasta qué número quieres contar (número mayor que 1)?"));
+            } while (countLimit <= 0);
+
+            for (let i = 1; i <= countLimit; i++) {
+                console.log(i);
+            }
+        }
+
+        function nasa() {
+
+            let countNasa;
+            do {
+                countNasa = parseInt(prompt("¿Hasta qué número quieres contar (número mayor que 1)?"));  
+            } while (countNasa <= 0);
+
+            for (let i = countNasa; i >= 0; i--) {
+                console.log(i);
+            }
+            console.log("¡¡¡Ignición!!!");
+        }
+
+        function student() {
+
+            let cardValue;
+            do {
+                cardValue = parseInt(prompt("¿Hasta qué número quieres contar (número mayor que 1)?"));
+            } while (cardValue <= 0);
+
+            for (let i = 1; i <= cardValue; i++) {
+                let percent = i % 10;
+                if (percent == 1) {
+                    console.log("Ás");
+                }
+                else if (percent == 8) {
+                    console.log("Sota");
+                }
+                else if (percent == 9) {
+                    console.log("Caballo");
+                }
+                else if (percent == 0) {
+                    console.log("Rey");
+                }
+                else {
+                    console.log(percent);
+                }
+            }
+        }
+
+        function sesame() {
+
+            let sesame;
+            do {
+            sesame = parseInt(prompt("¿Hasta qué número quieres contar (número mayor que 1)?"));
+              
+            } while (sesame <= 0);
+
+            for (let i = 1; i <= sesame; i++) {
+                console.log("¡¡¡¡¡¡¡ " + i + " !!!!!!!");
+            } 
+        }
+
+        function postman() {
+            let postman;
+            do {
+                postman = parseInt(prompt("¿Hasta qué número quieres contar (número mayor que 1)?"))
+                
+            } while (postman <= 0);
+
+            for (let i = 1; i <= postman; i += 2) {
+                console.log(i);
+            }
+            for (let i = 2; i <= postman; i += 2) {
+                console.log(i);
+            }
+        }
+    </script>
+        
+    
+
+</body>
+</html>
